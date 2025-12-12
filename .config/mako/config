@@ -1,0 +1,11 @@
+# Mako notification config (dark background to match Waybar battery)
+background=#1e1e2ecc   # dark (rgba(30,30,46,0.8) approx)
+foreground=#f0f0ff     # light text
+border-color=#000000
+border-size=0
+corner-radius=8
+width=320
+margin=8
+padding=8
+format="%a %s"
+timeout=10
