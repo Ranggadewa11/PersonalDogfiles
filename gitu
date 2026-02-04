@@ -1,0 +1,29 @@
+outputs = inputs@{ self, nixpkgs, home-manager, mango, dms, ... }: {
+    # Hostname kamu adalah "nixos" (sesuai configuration.nix baris 5)
+    nixosConfigurations.nixos = nixpkgs.lib.nixosSystem {
+      system = "x86_64-linux";
+      
+      # Meneruskan input ke dalam modul agar bisa dipanggil
+      specialArgs = { inherit inputs; };
+      
+      modules = [
+        # Modul Sistem Utama
+        ./configuration.nix
+
+        # Modul Mango
+        mango.nixosModules.mango
+        dms.nixosModules.dank-material-shell
+
+         
+        # Modul Home Manager
+        home-manager.nixosModules.home-manager
+        {
+          home-manager.useGlobalPkgs = true;
+          home-manager.useUserPackages = true;
+          home-manager.extraSpecialArgs = { inherit inputs; };
+          home-manager.users.dewtf = import ./home-manager/home.nix;
+        }
+      ];
+    };
+  };
+}
