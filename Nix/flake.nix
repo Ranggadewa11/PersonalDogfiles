@@ -30,26 +30,12 @@
         dms.nixosModules.dank-material-shell
       ];
     };
-
-    # =========================
-    # Home Manager (USER)
-    # =========================
-   # =========================
-# Home Manager (USER)
-# =========================
-homeConfigurations.dewtf =
-  home-manager.lib.homeManagerConfiguration {
-    pkgs = import nixpkgs {
-      system = "x86_64-linux";
-      config.allowUnfree = true;
-    };
-
-    extraSpecialArgs = { inherit inputs; };
-
-    modules = [
-      inputs.nix-monitor.homeManagerModules.default
-      ./home-manager/home.nix
-          ];
-        }; 
+     home-manager.nixosModules.home-manager
+        {
+          home-manager.useGlobalPkgs = true;
+          home-manager.useUserPackages = true;
+          home-manager.extraSpecialArgs = { inherit inputs; };
+          home-manager.users.dewtf = import ./home-manager/home.nix;
+        }
      };
 }
