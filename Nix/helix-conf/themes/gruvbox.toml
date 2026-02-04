@@ -1,0 +1,150 @@
+# Syntax highlighting
+# -------------------
+"attribute" = "yellow"
+
+"type" = "yellow"
+"type.enum.variant" = "aqua"
+
+"constructor" = "blue"
+
+"constant" = "orange"
+"constant.character" = "aqua"
+"constant.character.escape" = "purple"
+
+"string" = "green"
+"string.regexp" = "purple"
+"string.special" = "blue"
+"string.special.symbol" = "red"
+
+"comment" = { fg = "gray2", modifiers = ["italic"] }
+
+"variable" = "fg"
+"variable.parameter" = { fg = "red", modifiers = ["italic"] }
+"variable.builtin" = "red"
+"variable.other.member" = "aqua"
+
+"label" = "blue" # used for lifetimes
+
+"punctuation" = "gray2"
+"punctuation.special" = "aqua"
+
+"keyword" = "purple"
+"keyword.control.conditional" = { fg = "purple", modifiers = ["italic"] }
+
+"operator" = "aqua"
+
+"function" = "blue"
+"function.macro" = "purple"
+
+"tag" = "blue"
+
+"namespace" = { fg = "yellow", modifiers = ["italic"] }
+
+"special" = "blue" # fuzzy highlight
+
+"markup.heading.marker" = { fg = "orange", modifiers = ["bold"] }
+"markup.heading.1" = "blue"
+"markup.heading.2" = "purple"
+"markup.heading.3" = "green"
+"markup.heading.4" = "yellow"
+"markup.heading.5" = "purple"
+"markup.heading.6" = "aqua"
+"markup.list" = "purple"
+"markup.bold" = { modifiers = ["bold"] }
+"markup.italic" = { modifiers = ["italic"] }
+"markup.link.url" = { fg = "blue", modifiers = ["italic", "underlined"] }
+"markup.link.text" = "blue"
+"markup.raw" = "orange"
+
+"diff.plus" = "green"
+"diff.minus" = "red"
+"diff.delta" = "blue"
+
+# User Interface
+# --------------
+"ui.background" = { fg = "fg", bg = "bg0" }
+
+"ui.linenr" = { fg = "gray1" }
+"ui.linenr.selected" = { fg = "yellow" }
+
+"ui.statusline" = { fg = "fg2", bg = "bg1" }
+"ui.statusline.inactive" = { fg = "gray2", bg = "bg1" }
+"ui.statusline.normal" = { fg = "bg0", bg = "yellow", modifiers = ["bold"] }
+"ui.statusline.insert" = { fg = "bg0", bg = "green", modifiers = ["bold"] }
+"ui.statusline.select" = { fg = "bg0", bg = "orange", modifiers = ["bold"] }
+
+"ui.popup" = { fg = "fg", bg = "bg2" }
+"ui.window" = { fg = "bg4" }
+"ui.help" = { fg = "gray2", bg = "bg2" }
+
+"ui.bufferline" = { fg = "fg3", bg = "bg1" }
+"ui.bufferline.active" = { fg = "purple", bg = "bg0", underline = { color = "purple", style = "line" } }
+"ui.bufferline.background" = { bg = "bg4" }
+
+"ui.text" = "fg"
+"ui.text.focus" = { fg = "fg", bg = "bg2", modifiers = ["bold"] }
+"ui.text.inactive" = { fg = "gray1" }
+
+"ui.virtual" = "gray0"
+"ui.virtual.ruler" = { bg = "bg2" }
+"ui.virtual.indent-guide" = "bg2"
+"ui.virtual.inlay-hint" = { fg = "gray1", bg = "bg1" }
+"ui.virtual.jump-label" = { fg = "orange", modifiers = ["bold"] }
+
+"ui.selection" = { bg = "bg3" }
+
+"ui.cursor" = { fg = "bg0", bg = "gray1" }
+"ui.cursor.primary" = { fg = "bg0", bg = "orange" }
+"ui.cursor.match" = { fg = "yellow", modifiers = ["bold"] }
+
+"ui.cursor.primary.normal" = { fg = "bg0", bg = "yellow" }
+"ui.cursor.primary.insert" = { fg = "bg0", bg = "green" }
+"ui.cursor.primary.select" = { fg = "bg0", bg = "orange" }
+
+"ui.cursor.normal" = { fg = "bg0", bg = "gray1" }
+"ui.cursor.insert" = { fg = "bg0", bg = "green" }
+"ui.cursor.select" = { fg = "bg0", bg = "gray1" }
+
+"ui.cursorline.primary" = { bg = "cursorline" }
+
+"ui.highlight" = { bg = "bg3", modifiers = ["bold"] }
+
+"ui.menu" = { fg = "gray2", bg = "bg2" }
+"ui.menu.selected" = { fg = "fg", bg = "bg3", modifiers = ["bold"] }
+
+"diagnostic.error" = { underline = { color = "red", style = "curl" } }
+"diagnostic.warning" = { underline = { color = "yellow", style = "curl" } }
+"diagnostic.info" = { underline = { color = "blue", style = "curl" } }
+"diagnostic.hint" = { underline = { color = "aqua", style = "curl" } }
+
+error = "red"
+warning = "yellow"
+info = "blue"
+hint = "aqua"
+
+# Catppuccin Mocha Palette
+# -----------------------
+[palette]
+bg0 = "#1e1e2e" # base
+bg1 = "#181825" # mantle
+bg2 = "#313244" # surface0
+bg3 = "#45475a" # surface1
+bg4 = "#585b70" # surface2
+
+fg  = "#cdd6f4" # text
+fg2 = "#bac2de" # subtext1
+fg3 = "#a6adc8" # subtext0
+
+gray0 = "#6c7086" # overlay0
+gray1 = "#7f849c" # overlay1
+gray2 = "#9399b2" # overlay2
+
+red    = "#f38ba8"
+green  = "#a6e3a1"
+yellow = "#f9e2af"
+blue   = "#89b4fa"
+purple = "#cba6f7" # MAUVE
+aqua   = "#94e2d5"
+orange = "#fab387"
+
+cursorline = "#2a2b3c"
